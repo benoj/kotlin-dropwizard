@@ -21,6 +21,9 @@ The application inlcludes:
 `/api`: This sub project contains the API classes which the application communicated in. The intention here is to keep this as a seperate module to enable seperate publishing of API contracts e.g. for use in another service or client.
 
 `src/main/resources`: dropwizard resource classes
+
 `src/main/Server.kt` Main bootstrapping of the application, here is where you wire up your depencencies etc..
+
 `src/main/Main.kt` Main entry point for running the application
+
 `src/main/ServerConfiguration`: Configuration class for the application
