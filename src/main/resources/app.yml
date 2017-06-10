@@ -1,0 +1,21 @@
+server:
+  rootPath: /
+  applicationConnectors:
+    - type: http
+      port:  ${APPLICATION_PORT!8080}
+
+  adminConnectors:
+    - type: http
+      port: ${ADMIN_PORT!8081}
+  requestLog:
+      appenders:
+        - type: console
+
+# Logging settings.
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+
+  appenders:
+    - type: console

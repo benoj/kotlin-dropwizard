@@ -1,0 +1,30 @@
+apply plugin: 'kotlin'
+
+version = project(":").version
+
+group = 'com.github'
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+dependencies {
+}
+
+task sourceJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourceJar
+}
+
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
